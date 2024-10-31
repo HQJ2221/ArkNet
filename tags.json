@@ -1,0 +1,102 @@
+[
+  {
+    "tid": 7,
+    "name": "123",
+    "color": "00FF00",
+    "hide": true,
+    "colors": [
+      "00FF00",
+      "00FFFF",
+      "FF0000",
+      "FF00FF",
+      "930093",
+      "00EC00",
+      "7D7DFF",
+      "8CEA00",
+      "A6A600",
+      "FF8000",
+      "B87070",
+      "A5A552"
+    ]
+  },
+  {
+    "tid": 2,
+    "name": "Info3",
+    "color": "00FF00",
+    "hide": false,
+    "colors": [
+      "00FF00",
+      "00FFFF",
+      "FF0000",
+      "FF00FF",
+      "930093",
+      "00EC00",
+      "7D7DFF",
+      "8CEA00",
+      "A6A600",
+      "FF8000",
+      "B87070",
+      "A5A552"
+    ]
+  },
+  {
+    "tid": 5,
+    "name": "Info2",
+    "color": "00EC00",
+    "hide": false,
+    "colors": [
+      "00FF00",
+      "00FFFF",
+      "FF0000",
+      "FF00FF",
+      "930093",
+      "00EC00",
+      "7D7DFF",
+      "8CEA00",
+      "A6A600",
+      "FF8000",
+      "B87070",
+      "A5A552"
+    ]
+  },
+  {
+    "tid": 3,
+    "name": "Info1",
+    "color": "FF8000",
+    "hide": false,
+    "colors": [
+      "00FF00",
+      "00FFFF",
+      "FF0000",
+      "FF00FF",
+      "930093",
+      "00EC00",
+      "7D7DFF",
+      "8CEA00",
+      "A6A600",
+      "FF8000",
+      "B87070",
+      "A5A552"
+    ]
+  },
+  {
+    "tid": 4,
+    "name": "Info4",
+    "color": "00FF00",
+    "hide": true,
+    "colors": [
+      "00FF00",
+      "00FFFF",
+      "FF0000",
+      "FF00FF",
+      "930093",
+      "00EC00",
+      "7D7DFF",
+      "8CEA00",
+      "A6A600",
+      "FF8000",
+      "B87070",
+      "A5A552"
+    ]
+  }
+]

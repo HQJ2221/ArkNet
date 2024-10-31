@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.*?>
+<AnchorPane fx:id="settingsPage" prefHeight="500.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/17.0.2-ea"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.demofx.controller.SettingsController">
+    <children>
+        <Label fx:id="settingsLabel" layoutX="173.0" layoutY="29.0" text="Settings" AnchorPane.leftAnchor="173.0"
+               AnchorPane.rightAnchor="137.0" AnchorPane.topAnchor="29.0" >
+            <font>
+                <Font name="Microsoft YaHei Bold" size="19.0"/>
+            </font>
+        </Label>
+        <Label fx:id="themeLabel" layoutX="54.0" layoutY="96.0" text="Theme" AnchorPane.leftAnchor="50.0">
+            <font>
+                <Font name="Microsoft YaHei Bold" size="10.0"/>
+            </font>
+        </Label>
+        <Label fx:id="newPasswordLabel" layoutX="50.0" layoutY="209.0" text="New password">
+            <font>
+                <Font name="Microsoft YaHei Bold" size="10.0"/>
+            </font>
+        </Label>
+        <Label fx:id="oldPassWordLabel" layoutX="50.0" layoutY="150.0" text="Old password">
+            <font>
+                <Font name="Microsoft YaHei Bold" size="10.0"/>
+            </font>
+        </Label>
+        <Label fx:id="languageLabel" layoutX="50.0" layoutY="266.0" text="Language" AnchorPane.leftAnchor="50.0">
+            <font>
+                <Font name="Microsoft YaHei Bold" size="10.0" />
+            </font>
+        </Label>
+        <Label fx:id="aboutUsLabel" layoutX="50.0" layoutY="320.0" text="About us" AnchorPane.leftAnchor="50.0">
+            <font>
+                <Font name="Microsoft YaHei Bold" size="10.0"/>
+            </font>
+        </Label>
+
+        <Button fx:id="confirmButton" layoutX="214.0" layoutY="363.0" mnemonicParsing="false"
+                onAction="#handleConfirmAction"
+                style="-fx-text-fill: white; -fx-background-color: #3baae7;" styleClass="rounded-button"
+                stylesheets="../../../../stylesheets/style.css" text="OK">
+            <font>
+                <Font size="14.0"/>
+            </font>
+        </Button>
+        <Button fx:id="cancelButton" layoutX="280.0" layoutY="363.0" mnemonicParsing="false"
+                onAction="#handleCancelAction" styleClass="rounded-button"
+                stylesheets="../../../../stylesheets/style.css" text="Cancel">
+            <font>
+                <Font size="14.0"/>
+            </font>
+        </Button>
+        <TextField fx:id="oldPasswordField" layoutX="125.0" layoutY="152.0"/>
+        <TextField fx:id="newPasswordField" layoutX="125.0" layoutY="211.0"/>
+        <ToggleButton fx:id="themeToggleButton" layoutX="134.0" layoutY="98.0" mnemonicParsing="false"
+                      onAction="#handleThemeToggleAction" styleClass="toggle-button"
+                      stylesheets="../../../../stylesheets/style.css">
+            <graphic>
+                <StackPane fx:id="thumbContainer" maxHeight="20" minHeight="20" minWidth="40" styleClass="toggle-group">
+                    <Circle fx:id="thumb" radius="10" styleClass="thumb" StackPane.alignment="CENTER_LEFT"/>
+                </StackPane>
+            </graphic>
+        </ToggleButton>
+        <ImageView fx:id="settingsImageView" fitHeight="33.0" fitWidth="33.0" layoutX="139.0" layoutY="30.0"
+                   pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="130.0">
+            <image>
+                <Image url="@../../../../icons/设置齿轮_黑.png"/>
+            </image>
+        </ImageView>
+        <ImageView fx:id="forgetPasswordView" fitHeight="73.0" fitWidth="31.0" layoutX="303.0" layoutY="148.0"
+                   onMouseClicked="#handleForgetPasswordAction" pickOnBounds="true" preserveRatio="true"
+                   AnchorPane.leftAnchor="303.0" AnchorPane.topAnchor="148.0">
+            <image>
+                <Image url="@../../../../icons/问号_黑.png"/>
+            </image>
+        </ImageView>
+        <Label fx:id="outputLabel" layoutX="125.0" layoutY="179.0" prefHeight="15.0" prefWidth="117.0"/>
+    </children>
+</AnchorPane>

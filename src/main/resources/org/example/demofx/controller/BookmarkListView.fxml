@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.VBox?>
+<ScrollPane fitToHeight="true" fitToWidth="true" hbarPolicy="NEVER" stylesheets="@../../../../stylesheets/style.css"
+            styleClass="scroll-pane"
+            vbarPolicy="ALWAYS" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="org.example.demofx.controller.BookmarkListView">
+    <VBox fx:id="BookmarkListVBox" style="-fx-background-color: #ffffff;">
+    </VBox>
+</ScrollPane>

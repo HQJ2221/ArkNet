@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane style="-fx-background-color: transparent;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.demofx.controller.BookmarkView">
+    <HBox prefHeight="150.0" style="-fx-border-radius: 10; -fx-background-radius: 10; -fx-background-color: #efefef;" AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="0">
+        <VBox alignment="CENTER" prefWidth="400.0" spacing="10.0">
+            <HBox>
+                <Label fx:id="bookmarkTitleLabel" style="-fx-font-size: 28px;" text="title" />
+            </HBox>
+            <HBox>
+                <Label fx:id="bookmarkUrlLabel" onMouseClicked="#onClickBookmarkOpenWebsite" text="url">
+                    <font>
+                        <Font size="10.0" />
+                    </font>
+                </Label>
+            </HBox>
+            <HBox>
+                <Label fx:id="bookmarkDescriptionLabel" text="description">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+            </HBox>
+            <padding>
+                <Insets bottom="40.0" left="40.0" right="40.0" top="40.0" />
+            </padding>
+        </VBox>
+
+        <VBox alignment="CENTER" prefWidth="200.0">
+            <ImageView fx:id="bookmarkIcon" fitHeight="120.0" fitWidth="120.0" />
+        </VBox>
+
+        <VBox alignment="CENTER" minWidth="80.0" spacing="20.0">
+            <Button fx:id="bookmarkMoveUpButton" onMouseClicked="#onClickBookmarkMoveUp" style="-fx-text-fill: white; -fx-background-color: #3baae7;" text="⏫" />
+
+            <Button fx:id="bookmarkMoveDownButton" onMouseClicked="#onClickBookmarkMoveDown" style="-fx-text-fill: white; -fx-background-color: #3baae7;" text="⏬" />
+
+            <Button fx:id="bookmarkEditButton" onMouseClicked="#onClickBookmarkEdit" style="-fx-text-fill: white; -fx-background-color: #3baae7;" text="Edit" />
+            <padding>
+                <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+            </padding>
+        </VBox>
+    </HBox>
+    <padding>
+        <Insets bottom="10.0" left="20.0" right="25.0" top="10.0" />
+    </padding>
+</AnchorPane>

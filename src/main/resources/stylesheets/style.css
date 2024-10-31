@@ -1,0 +1,76 @@
+.bookmark-pane .hyperlink {
+    -fx-text-fill: blue;
+    -fx-underline: false;
+}
+
+.rounded-button {
+    -fx-background-color: black;
+    -fx-text-fill: white;
+    -fx-background-radius: 10px;
+    -fx-padding: 5 12 5 12;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.8) , 5, 0.0 , 0 , 1 );
+}
+
+.text-field {
+    -fx-background-color: #f0f0f0; /* 设置背景色 */
+    -fx-background-insets: 0, 0, 1, 2; /* 设置背景插入，可以用来创建边框效果 */
+    -fx-background-radius: 15; /* 设置背景圆角 */
+    -fx-padding: 8 15; /* 设置内边距 */
+    -fx-font-size: 14px; /* 设置字体大小 */
+    -fx-font-family: "思源黑体"; /* 设置字体 */
+    -fx-text-fill: #333; /* 设置文本颜色 */
+    -fx-border-color: #ccc; /* 设置边框颜色 */
+    -fx-border-width: 1; /* 设置边框宽度 */
+    -fx-border-radius: 15; /* 设置边框的圆角 */
+}
+
+.toggle-button {
+    -fx-background-color: transparent;
+    /*-fx-text-fill: black;*/
+    -fx-padding: 0;
+    /*-fx-background-radius: 20; */
+}
+
+.toggle-button .thumb {
+    -fx-background-color: white;
+    -fx-background-radius: 10;
+}
+
+.toggle-button:selected .thumb {
+    -fx-background-color: #dddddd; /* Light grey when selected */
+}
+
+.toggle-button .toggle-group {
+    -fx-background-color: linear-gradient(to right, #cccccc, #555555);
+    -fx-background-radius: 20;
+    -fx-padding: 5;
+}
+
+.scroll-pane > .scroll-bar:vertical {
+    -fx-unit-increment: 1000;
+    -fx-block-increment: 1000;
+    -fx-background-color: white;
+}
+
+/* 默认list cell样式 */
+.list-cell {
+    -fx-background-color: white; /* 设置默认背景色为白色 */
+    -fx-border-color: transparent; /* 边框颜色 */
+}
+
+/* 鼠标悬浮在list cell上时的样式 */
+.list-cell:hover {
+    -fx-background-color: #f0f0f0; /* 浅灰色背景 */
+}
+
+/* 选中状态的list cell样式 */
+.list-cell:selected {
+    -fx-background-color: #e0e0e0; /* 深灰色背景 */
+    -fx-text-fill: black; /* 文字颜色 */
+}
+
+/* 焦点在list cell上时的样式 */
+.list-cell:focused {
+    -fx-background-color: #e0e0e0; /* 保持深灰色背景与选中状态相同 */
+    -fx-background-insets: 0, 0, 1, 0; /* 调整背景插图 */
+}

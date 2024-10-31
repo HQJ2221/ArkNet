@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.collections.FXCollections?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.SVGPath?>
+<?import javafx.scene.text.Text?>
+<?import java.lang.*?>
+<AnchorPane xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="org.example.demofx.controller.MainView">
+    <SplitPane dividerPositions="0.25" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+               AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <!--Left Part-->
+        <VBox style="-fx-background-color: #efefef;">
+            <HBox alignment="CENTER" prefHeight="50" spacing="5" style="-fx-background-color: transparent;">
+                <!--后期记得将text换成图片-->
+                <Button fx:id="MainEnablePrivateButton" onMouseClicked="#onClickMainEnablePrivateButton"
+                        style="-fx-text-fill: white; -fx-background-color: #3baae7;" text="Private">
+                    <graphic>
+                        <ImageView fitHeight="20" fitWidth="20">
+                            <image>
+                                <Image url="@../../../../icons/private.png"/>
+                            </image>
+                        </ImageView>
+                    </graphic>
+                </Button>
+                <Button fx:id="MainResetTagsButton" onMouseClicked="#onClickMainResetTagsButton"
+                        style="-fx-text-fill: white; -fx-background-color: #3baae7;">
+                    <graphic>
+                        <ImageView fitHeight="20" fitWidth="20">
+                            <image>
+                                <Image url="@../../../../icons/restart.png"/>
+                            </image>
+                        </ImageView>
+                    </graphic>
+                </Button>
+                <Button fx:id="MainAddTagButton" onMouseClicked="#onClickMainAddTagButton"
+                        style="-fx-text-fill: white; -fx-background-color: #3baae7;">
+                    <graphic>
+                        <ImageView fitHeight="20" fitWidth="20">
+                            <image>
+                                <Image url="@../../../../icons/plus.png"/>
+                            </image>
+                        </ImageView>
+                    </graphic>
+                </Button>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" maxHeight="50" minHeight="50" prefHeight="50"
+                  style="-fx-font-size: 16px; -fx-padding: 0 25; -fx-background-color: transparent;">
+                <Label text="Tags"/>
+            </HBox>
+            <HBox prefHeight="500" style="-fx-background-color: transparent;" alignment="CENTER">
+                <children>
+                    <ListView fx:id="tagList" prefHeight="200.0" prefWidth="200.0" styleClass="list-cell"
+                              stylesheets="@../../../../stylesheets/style.css">
+                        <padding>
+                            <Insets left="0.0"/>
+                        </padding>
+                    </ListView>
+                </children>
+            </HBox>
+        </VBox>
+        <!--Right Part-->
+        <VBox style="-fx-background-color: #ffffff;">
+            <!--Right Top-->
+            <HBox alignment="CENTER" minHeight="80.0" prefHeight="80.0" spacing="5"
+                  style="-fx-background-color: transparent;">
+                <Label fx:id="MainTitleLabel" prefHeight="200" prefWidth="160"
+                       style="-fx-font-size: 26px; -fx-padding: 0 15 0 15; -fx-background-color: transparent; -fx-font-weight: bold;"
+                       text="NetArk" textAlignment="CENTER" textFill="#3baae7"/>
+                <SVGPath content="M12.5 7.5a5 5 0 1 0-10 0 5 5 0 0 0 10 0zm-3 7l4 4" style="-fx-padding: 0 10" />
+                <TextField fx:id="MainSearchTextField" prefHeight="50" prefWidth="200"
+                           style="-fx-background-color: #efefef; -fx-border-radius: 15; -fx-background-radius: 15; -fx-padding: 10;"/>
+                <Button fx:id="MainSearchButton" onMouseClicked="#onClickMainSearchButton" scaleX="1.2" scaleY="1.2"
+                        style="-fx-text-fill: white; -fx-background-color: #3baae7;" text="🔍"/>
+                <Region HBox.hgrow="ALWAYS"/>
+
+                <!--增加一个排序的下拉框-->
+                <ComboBox fx:id="MainSortComboBox" maxWidth="80.0" onAction="#onMainSortComboBoxAction"
+                          promptText="Sort...">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value="In ascending order of addition"/>
+                            <String fx:value="In descending order of addition"/>
+                            <String fx:value="In ascending order of clicks"/>
+                            <String fx:value="In descending order of clicks"/>
+                            <String fx:value="Custom sort"/>
+                        </FXCollections>
+                    </items>
+                </ComboBox>
+                <Region HBox.hgrow="ALWAYS"/>
+                <Button fx:id="MainOpenSettingsButton" onMouseClicked="#onClickMainOpenSettingsButton" scaleX="1.2" scaleY="1.2"
+                        style="-fx-text-fill: white; -fx-background-color: #3baae7;" text="⚙"/>
+                <padding>
+                    <Insets bottom="20.0" left="15.0" right="15.0" top="20.0"/>
+                </padding>
+
+            </HBox>
+            <!--Right Body-->
+            <VBox fx:id="ListView" style="-fx-background-color: transparent;" VBox.vgrow="ALWAYS">
+
+            </VBox>
+            <Region VBox.vgrow="ALWAYS"/>
+            <!--Right Bottom-->
+        </VBox>
+    </SplitPane>
+    <StackPane layoutX="800" layoutY="550">
+        <Circle fx:id="MainAddBookmarkButton" fill="#ff8e00" onMouseClicked="#onClickMainAddBookmarkButton"
+                radius="30" style="-fx-effect: dropshadow( three-pass-box, rgba(0,0,0,0.8), 5, 0.0, 0, 1)"/>
+        <Text fill="WHITE" onMouseClicked="#onClickMainAddBookmarkButton"
+              style="-fx-font-size: 36px; -fx-font-weight: bold;" text="+"/>
+    </StackPane>
+</AnchorPane>
